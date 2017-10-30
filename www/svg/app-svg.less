@@ -1,0 +1,33 @@
+@import (once) "../../customize/src/less2/include/browser.less";
+@import (once) "../../customize/src/less2/include/toolbar.less";
+@import (once) '../../customize/src/less2/include/fileupload.less';
+@import (once) '../../customize/src/less2/include/alertify.less';
+@import (once) '../../customize/src/less2/include/tools.less';
+@import (once) '../../customize/src/less2/include/tokenfield.less';
+
+.toolbar_main();
+.fileupload_main();
+.alertify_main();
+.tokenfield_main();
+
+// body
+&.cp-app-svg {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+
+    #cp-app-svg-editor {
+        flex: 1;
+        display: flex;
+
+        #cp-app-svg-editor-frame {
+            flex: 1;
+            border: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+    }
+
+}
+
