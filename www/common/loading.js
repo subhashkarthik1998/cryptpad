@@ -1,4 +1,4 @@
-define([], function () {
+define(['/api/config'], function (ApiConfig) {
     var loadingStyle = (function(){/*
 #cp-loading {
   position: fixed;
@@ -69,7 +69,7 @@ define([], function () {
         loadingStyle,
         '</style>',
         '<div class="cp-loading-container">',
-            '<img class="cp-loading-cryptofist" src="/customize/cryptpad-new-logo-colors-logoonly.png?' + urlArgs + '">',
+            '<img class="cp-loading-cryptofist" src="' + ApiConfig.prefix + '/customize/cryptpad-new-logo-colors-logoonly.png?' + urlArgs + '">',
             '<div class="cp-loading-spinner-container">',
                 '<span class="fa fa-circle-o-notch fa-spin fa-4x fa-fw"></span>',
             '</div>',

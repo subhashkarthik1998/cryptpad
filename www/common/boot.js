@@ -4,9 +4,7 @@ define(['../api/config?cb=' + (+new Date()).toString(16), 'module'], function (C
     if (Config.prefix) {
         Config.requireConf.onNodeCreated = function (node /*, config, module, path*/) {
             if (node.getAttribute('src').indexOf('/') === 0) {
-                console.log(node.getAttribute('src'));
-                console.log(Config.prefix);
-                node.setAttribute('src', '/' + Config.prefix + node.getAttribute('src'));
+                node.setAttribute('src', Config.prefix + node.getAttribute('src'));
             }
         };
     }

@@ -1,4 +1,7 @@
-define(['/customize/messages.js'], function (Messages) {
+define([
+    '/customize/messages.js',
+    '/api/config'
+], function (Messages, ApiConfig) {
     var Feedback = {};
 
     Feedback.init = function (state) {
@@ -24,7 +27,7 @@ define(['/customize/messages.js'], function (Messages) {
             if (!Feedback.state) { return; }
         }
 
-        var href = '/common/feedback.html?' + action + '=' + randomToken();
+        var href = (ApiConfig.prefix || '') + '/common/feedback.html?' + action + '=' + randomToken();
         ajax(href);
     };
 

@@ -806,7 +806,7 @@ define([
             title: buttonTitle,
             'class': "cp-toolbar-link-logo"
         }).append($('<img>', {
-            src: '/customize/images/logo_white.png?' + ApiConfig.requireConf.urlArgs
+            src: ApiConfig.prefix + '/customize/images/logo_white.png?' + ApiConfig.requireConf.urlArgs
         }));
         var onClick = function (e) {
             e.preventDefault();

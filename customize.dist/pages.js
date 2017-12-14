@@ -382,7 +382,7 @@ define([
                 h('div.container.cp-container', [
                     h('div.row', [
                         h('div.cp-title.col-12.col-sm-6', [
-                            h('img', { src: '/customize/cryptpad-new-logo-colors-logoonly.png?' + urlArgs }),
+                            h('img', { src: Config.prefix + '/customize/cryptpad-new-logo-colors-logoonly.png?' + urlArgs }),
                             h('h1', 'CryptPad'),
                             h('p', Msg.main_catch_phrase)
                         ]),
@@ -436,7 +436,7 @@ define([
         return h('div#cp-loading', 
             h('div.cp-loading-container', [
                 h('img.cp-loading-cryptofist', {
-                    src: '/customize/cryptpad-new-logo-colors-logoonly.png?' + urlArgs
+                    src: Config.prefix + '/customize/cryptpad-new-logo-colors-logoonly.png?' + urlArgs
                 }),
                 h('div.cp-loading-spinner-container',
                     h('span.fa.fa-circle-o-notch.fa-spin.fa-4x.fa-fw')),

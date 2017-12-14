@@ -589,6 +589,7 @@ define([
                     crypto: Crypto.createEncryptor(secret.keys),
                     onConnect: function (wc) {
                         if (window.location.hash && window.location.hash !== '#') {
+                            return;
                             window.location = parsed.getUrl({
                                 present: parsed.hashData.present,
                                 embed: parsed.hashData.embed

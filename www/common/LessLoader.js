@@ -50,6 +50,7 @@ define([
             ua[0] = parent.replace(/\/[^\/]*$/, '/') + ua[0];
         }
         var out = ua.join('#');
+        if (Config.prefix && out.indexOf('/') === 0) { out = Config.prefix + out; }
         //console.log(url + "  -->  " + out);
         return out;
     };

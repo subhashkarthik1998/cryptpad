@@ -41,8 +41,8 @@ define(['/api/config'], function (ApiConfig) {
         }
     };
 
-    var DEFAULT_MAIN = '/customize/main-favicon.png?' + ApiConfig.requireConf.urlArgs;
-    var DEFAULT_ALT = '/customize/alt-favicon.png?' + ApiConfig.requireConf.urlArgs;
+    var DEFAULT_MAIN = ApiConfig.prefix + '/customize/main-favicon.png?' + ApiConfig.requireConf.urlArgs;
+    var DEFAULT_ALT = ApiConfig.prefix + '/customize/alt-favicon.png?' + ApiConfig.requireConf.urlArgs;
 
     var createFavicon = function () {
         console.log("creating favicon");

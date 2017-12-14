@@ -15,7 +15,7 @@ define([
         var req = {
             cfg: requireConfig,
             req: [ '/common/loading.js' ],
-            pfx: window.location.origin
+            pfx: window.location.origin + ApiConfig.prefix
         };
         window.rc = requireConfig;
         window.apiconf = ApiConfig;

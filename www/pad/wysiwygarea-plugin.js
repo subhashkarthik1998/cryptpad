@@ -39,7 +39,7 @@ define(['/api/config'], function (ApiConfig) {
             }
             
             // CryptPad
-            src = '/pad/ckeditor-inner.html?' + ApiConfig.requireConf.urlArgs;
+            src = 'ckeditor-inner.html?' + ApiConfig.requireConf.urlArgs;
 
             iframe = CKEDITOR.dom.element.createFromHtml( '<iframe src="' + src + '" frameBorder="0"></iframe>' );
             iframe.setStyles( { width: '100%', height: '100%' } );

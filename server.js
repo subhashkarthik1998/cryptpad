@@ -83,12 +83,12 @@ app.head(/^\/common\/feedback\.html/, function (req, res, next) {
 });
 }());
 
-var prefix = 'cryptpad';
+var prefix = '/cryptpad';
 
 app.use(function (req, res, next) {
-    if (req.url.indexOf('/' + prefix) === 0) {
-        req.url = req.url.replace('/cryptpad', '');
-    } else {
+    if (prefix && req.url.indexOf(prefix) === 0) {
+        req.url = req.url.replace(prefix, '');
+    } else if (prefix) {
         res.send('nope', 454);
         return;
     }
