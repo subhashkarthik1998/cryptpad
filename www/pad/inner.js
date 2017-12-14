@@ -34,7 +34,7 @@ define([
 
     '/bower_components/diff-dom/diffDOM.js',
 
-    'css!/bower_components/bootstrap/dist/css/bootstrap.min.css',
+    'less!/bower_components/bootstrap/dist/css/bootstrap.min.css',
     'less!/bower_components/components-font-awesome/css/font-awesome.min.css',
     'less!/customize/src/less2/main.less',
 ], function (
@@ -581,6 +581,7 @@ define([
                 }
                 // Used in ckeditor-config.js
                 Ckeditor.CRYPTPAD_URLARGS = ApiConfig.requireConf.urlArgs;
+                Ckeditor.CRYPTPAD_PREFIX = ApiConfig.prefix;
                 Ckeditor.plugins.addExternal('mediatag','/pad/', 'mediatag-plugin.js');
                 module.ckeditor = editor = Ckeditor.replace('editor1', {
                     customConfig: '/customize/ckeditor-config.js',

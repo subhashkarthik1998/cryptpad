@@ -14,14 +14,14 @@ define([
 
     'cm/mode/markdown/markdown',
 
-    'css!/bower_components/codemirror/lib/codemirror.css',
-    'css!/bower_components/codemirror/addon/dialog/dialog.css',
-    'css!/bower_components/codemirror/addon/fold/foldgutter.css',
-    'css!/bower_components/bootstrap/dist/css/bootstrap.min.css',
+    'less!/bower_components/codemirror/lib/codemirror.css',
+    'less!/bower_components/codemirror/addon/dialog/dialog.css',
+    'less!/bower_components/codemirror/addon/fold/foldgutter.css',
+    'less!/bower_components/bootstrap/dist/css/bootstrap.min.css',
     'less!/bower_components/components-font-awesome/css/font-awesome.min.css',
     'less!/customize/src/less2/main.less',
     '/bower_components/croppie/croppie.min.js',
-    'css!/bower_components/croppie/croppie.css',
+    'less!/bower_components/croppie/croppie.css',
 ], function (
     $,
     Crypto,

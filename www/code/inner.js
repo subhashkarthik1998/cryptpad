@@ -10,9 +10,9 @@ define([
     '/customize/messages.js',
     'cm/lib/codemirror',
 
-    'css!cm/lib/codemirror.css',
-    'css!cm/addon/dialog/dialog.css',
-    'css!cm/addon/fold/foldgutter.css',
+    'less!cm/lib/codemirror.css',
+    'less!cm/addon/dialog/dialog.css',
+    'less!cm/addon/fold/foldgutter.css',
 
     'cm/mode/markdown/markdown',
     'cm/addon/mode/loadmode',

@@ -11,13 +11,13 @@ define([
     '/customize/messages.js',
     'cm/lib/codemirror',
 
-    'css!/bower_components/bootstrap/dist/css/bootstrap.min.css',
+    'less!/bower_components/bootstrap/dist/css/bootstrap.min.css',
     'less!/bower_components/components-font-awesome/css/font-awesome.min.css',
     'less!/customize/src/less2/main.less',
 
-    'css!cm/lib/codemirror.css',
-    'css!cm/addon/dialog/dialog.css',
-    'css!cm/addon/fold/foldgutter.css',
+    'less!cm/lib/codemirror.css',
+    'less!cm/addon/dialog/dialog.css',
+    'less!cm/addon/fold/foldgutter.css',
 
     'cm/mode/markdown/markdown',
     'cm/addon/mode/loadmode',

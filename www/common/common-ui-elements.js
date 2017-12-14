@@ -10,7 +10,7 @@ define([
     '/common/media-tag.js',
     '/customize/messages.js',
 
-    'css!/common/tippy.css',
+    'less!/common/tippy.css',
 ], function ($, Config, Util, Hash, Language, UI, Feedback, h, MediaTag, Messages) {
     var UIElements = {};
 

@@ -10,7 +10,7 @@ define([
     '/customize/pages.js',
     '/common/hyperscript.js',
     '/bower_components/bootstrap-tokenfield/dist/bootstrap-tokenfield.js',
-    'css!/common/tippy.css',
+    'less!/common/tippy.css',
 ], function ($, Messages, Util, Hash, Notifier, AppConfig,
             Alertify, Tippy, Pages, h) {
     var UI = {};

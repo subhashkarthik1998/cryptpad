@@ -20,11 +20,11 @@ define([
 
     'cm/addon/display/placeholder',
     'cm/mode/markdown/markdown',
-    'css!cm/lib/codemirror.css',
+    'less!cm/lib/codemirror.css',
 
     '/bower_components/file-saver/FileSaver.min.js',
 
-    'css!/bower_components/bootstrap/dist/css/bootstrap.min.css',
+    'less!/bower_components/bootstrap/dist/css/bootstrap.min.css',
     'less!/bower_components/components-font-awesome/css/font-awesome.min.css',
     'less!/customize/src/less2/main.less',
 ], function (
