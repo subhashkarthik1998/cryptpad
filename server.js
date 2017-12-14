@@ -83,7 +83,15 @@ app.head(/^\/common\/feedback\.html/, function (req, res, next) {
 });
 }());
 
+var prefix = 'cryptpad';
+
 app.use(function (req, res, next) {
+    if (req.url.indexOf('/' + prefix) === 0) {
+        req.url = req.url.replace('/cryptpad', '');
+    } else {
+        res.send('nope', 454);
+        return;
+    }
     setHeaders(req, res);
     if (/[\?\&]ver=[^\/]+$/.test(req.url)) { res.setHeader("Cache-Control", "max-age=31536000"); }
     next();
@@ -145,6 +153,7 @@ app.get('/api/config', function(req, res){
                 waitSeconds: 60,
                 urlArgs: 'ver=' + Package.version + (FRESH_KEY? '-' + FRESH_KEY: '') + (DEV_MODE? '-' + (+new Date()): ''),
             },
+            prefix: prefix,
             removeDonateButton: (config.removeDonateButton === true),
             allowSubscriptions: (config.allowSubscriptions === true),
             websocketPath: config.useExternalWebsocket ? undefined : config.websocketPath,
