@@ -600,7 +600,9 @@ define([
                                 embed: parsed.hashData.embed
                             });
                             if (window.location !== loc) {
-                                console.log("\n\nREDIRECTING\n\n");
+                                console.log("\n\nREDIRECTING\n\n ");
+                                console.log(window.location);
+                                console.log(loc);
                                 window.location = loc;
                             }
                             return;
