@@ -261,7 +261,9 @@ define([
                     // should we overwrite the content, so lets just try again.
                     console.log("userDoc is '' but this is not a new pad, something is " +
                         "terribly wrong, reloading.");
-                    common.gotoURL();
+                    setTimeout(function () {
+                        common.gotoURL();
+                    }, 1000);
                     return;
                 }
                 console.log('updating title');

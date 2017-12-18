@@ -21,12 +21,6 @@ define([
         };
     }
 
-    var reload = window.location.reload;
-    window.location.__defineGetter__("reload", function () { return function () {
-        try { throw new Error(); } catch (e) { console.log(e.stack); }
-        reload();
-    }; });
-
     var failStore = function () {
         console.error(new Error('wut'));
         require(['jquery'], function ($) {
