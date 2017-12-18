@@ -594,10 +594,15 @@ define([
                     crypto: Crypto.createEncryptor(secret.keys),
                     onConnect: function (wc) {
                         if (window.location.hash && window.location.hash !== '#') {
-                            window.location = parsed.getUrl({
+
+                            var loc = parsed.getUrl({
                                 present: parsed.hashData.present,
                                 embed: parsed.hashData.embed
                             });
+                            if (window.location !== loc) {
+                                console.log("\n\nREDIRECTING\n\n");
+                                window.location = loc;
+                            }
                             return;
                         }
                         if (readOnly || cfg.noHash) { return; }
