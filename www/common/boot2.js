@@ -21,11 +21,11 @@ define([
         };
     }
 
-    window.location._reload = window.location.reload;
-    window.location.reload = function () {
+    var reload = window.location.reload;
+    window.location.__defineGetter__("reload", function () { return function () {
         try { throw new Error(); } catch (e) { console.log(e.stack); }
-        window.location._reload();
-    };
+        reload();
+    }; });
 
     var failStore = function () {
         console.error(new Error('wut'));
