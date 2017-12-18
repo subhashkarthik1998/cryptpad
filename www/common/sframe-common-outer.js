@@ -599,7 +599,7 @@ define([
                                 present: parsed.hashData.present,
                                 embed: parsed.hashData.embed
                             });
-                            if (window.location !== loc) {
+                            if (window.location.href !== window.location.origin + loc) {
                                 console.log("\n\nREDIRECTING\n\n ");
                                 console.log(window.location);
                                 console.log(loc);
