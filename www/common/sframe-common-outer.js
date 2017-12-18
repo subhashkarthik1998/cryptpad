@@ -470,6 +470,7 @@ define([
                 if (url) {
                     window.location.href = url;
                 } else {
+                    console.log("WINDOW LOCATION RELOAD CALLED");
                     window.location.reload();
                 }
             });
