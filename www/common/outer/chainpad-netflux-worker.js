@@ -81,6 +81,8 @@ define([], function () {
         };
 
         var onMsg = function(peer, msg, wc, network, direct) {
+            console.log("MSG>>" + msg);
+
             // unpack the history keeper from the webchannel
             var hk = network.historyKeeper;
 
@@ -123,7 +125,7 @@ define([], function () {
             // Why are we getting bencoded stuff to begin with?
             // FIXME this shouldn't be necessary
             message = unBencode(message);//.slice(message.indexOf(':[') + 1);
-console.log("MSG>>" + message);
+
             // pass the message into Chainpad
             onMessage(message);
             //sframeChan.query('Q_RT_MESSAGE', message, function () { });
