@@ -105,6 +105,7 @@ define([
             if (isReady) {
                 onLocal(); // should be onBeforeMessage
             }
+            console.log(content);
             chainpad.message(content);
             cb('OK');
         });
@@ -113,6 +114,7 @@ define([
             isReady = true;
             chainpad.start();
             setMyID({ myID: myID });
+            console.log('onReady');
             onReady({ realtime: chainpad });
         });
 
