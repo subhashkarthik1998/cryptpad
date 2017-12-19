@@ -47,6 +47,7 @@ define([], function () {
             // Trigger onReady only if not ready yet. This is important because the history keeper sends a direct
             // message through "network" when it is synced, and it triggers onReady for each channel joined.
             if (!initializing) { return; }
+            console.log("ONREADY");
             onReady();
             //sframeChan.event('EV_RT_READY', null);
             // we're fully synced
@@ -122,7 +123,7 @@ define([], function () {
             // Why are we getting bencoded stuff to begin with?
             // FIXME this shouldn't be necessary
             message = unBencode(message);//.slice(message.indexOf(':[') + 1);
-
+console.log("MSG>>" + message);
             // pass the message into Chainpad
             onMessage(message);
             //sframeChan.query('Q_RT_MESSAGE', message, function () { });
