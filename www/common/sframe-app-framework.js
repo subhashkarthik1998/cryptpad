@@ -406,8 +406,9 @@ define([
                 // really basic operational transform
                 patchTransformer: options.patchTransformer || ChainPad.SmartJSONTransformer,
 
-                // cryptpad debug logging (default is 1)
-                // logLevel: 2,
+                // cryptpad debug logging (default is 2)
+                logLevel: 2,
+
                 validateContent: options.validateContent || function (content) {
                     try {
                         JSON.parse(content);
