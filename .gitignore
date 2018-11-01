@@ -16,3 +16,5 @@ pins/
 blob/
 blobstage/
 privileged.conf
+.idea
+package-lock.json

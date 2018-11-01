@@ -115,8 +115,9 @@ Fs.exists(__dirname + "/customize", function (e) {
 // FIXME I think this is a regression caused by a recent PR
 // correct this hack without breaking the contributor's intended behaviour.
 
-var mainPages = config.mainPages || ['index', 'privacy', 'terms', 'about', 'contact'];
+var mainPages = config.mainPages || ['index', 'privacy', 'terms', 'about', 'contact', 'how-to-help'];
 var mainPagePattern = new RegExp('^\/(' + mainPages.join('|') + ').html$');
+console.log("Main pages: " + mainPagePattern);
 app.get(mainPagePattern, Express.static(__dirname + '/customize'));
 app.get(mainPagePattern, Express.static(__dirname + '/customize.dist'));
 
