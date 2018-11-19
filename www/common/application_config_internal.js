@@ -9,7 +9,7 @@ define(function() {
     /* Select the buttons displayed on the main page to create new collaborative sessions
      * Existing types : pad, code, poll, slide
      */
-    config.availablePadTypes = ['drive', 'pad', 'code', 'slide', 'poll', 'whiteboard', 'file', 'todo', 'contacts'];
+    config.availablePadTypes = ['drive', 'pad', 'code', 'slide', 'poll', 'kanban', 'whiteboard', 'file', 'todo', 'contacts'];
     config.registeredOnlyTypes = ['file', 'contacts'];
 
     /*  Cryptpad apps use a common API to display notifications to users
@@ -73,14 +73,17 @@ define(function() {
     // Customize the icon used for each application.
     // You can update the colors by making a copy of /customize.dist/src/less2/include/colortheme.less
     config.applicationsIcon = {
-        file: 'fa-file-text-o',
-        pad: 'fa-file-word-o',
-        code: 'fa-file-code-o',
-        slide: 'fa-file-powerpoint-o',
-        poll: 'fa-calendar',
-        whiteboard: 'fa-paint-brush',
-        todo: 'fa-tasks',
-        contacts: 'fa-users',
+        file: 'cptools-file',
+        fileupload: 'cptools-file-upload',
+        pad: 'cptools-pad',
+        code: 'cptools-code',
+        slide: 'cptools-slide',
+        poll: 'cptools-poll',
+        whiteboard: 'cptools-whiteboard',
+        todo: 'cptools-todo',
+        contacts: 'cptools-contacts',
+        kanban: 'cptools-kanban',
+        drive: 'fa-hdd-o',
     };
 
     // Ability to create owned pads and expiring pads through a new pad creation screen.
@@ -116,6 +119,19 @@ define(function() {
     // from an external source and make sure the users can't change them from CryptPad.
     // You can use config.afterLogin to import these values in the users' drive.
     //config.disableProfile = true;
+
+    // Disable the use of webworkers and sharedworkers in CryptPad.
+    // Workers allow us to run the websockets connection and open the user drive in a separate thread.
+    // SharedWorkers allow us to load only one websocket and one user drive for all the browser tabs,
+    // making it much faster to open new tabs.
+    // Warning: This is an experimental feature. It will be enabled by default once we're sure it's stable.
+    config.disableWorkers = false;
+
+    // Shared folder are in a beta-test state. They are likely to disappear from a user's drive
+    // spontaneously, resulting in the deletion of the entire folder's content.
+    // We highly recommend to keep them disabled until they are stable enough to be enabled
+    // by default by the CryptPad developers.
+    config.disableSharedFolders = false;
 
     return config;
 });

@@ -1,72 +1,73 @@
 @import (once) "../include/infopages.less";
 @import (once) "../include/colortheme-all.less";
 
-.infopages_main();
-.infopages_topbar();
+&.cp-page-how-to-help {
+    .infopages_main();
 
-.fa {
-    padding-right: 0.25em;
-}
-#cp-main {
-	background-color: #fff;
-}
-.cp-container {
-	background: #fff;
-	text-align: center;
-	.cp-iconCont {
-		h4 {
-			margin-top: 1.5em;
-			margin-bottom: 1.5em;
-		}
-		div {
-			.card {
-				padding: 1em 1em 0.5em 1em;
-				box-shadow: 0 5px 15px rgba(69,145,196, 0.3);
-				border-color: #fff;
-				text-align: center;
-				margin-bottom: 1em;
-				min-width: 10em;
-
-				&:hover, &:focus {
-					text-decoration: none;
-					transform: scale(1.05);
-				}
-				@media (max-width: 1200px) and (min-width: 769px) {
-					min-height: 139px;
-				}
-				@media (max-width: 768px) and (min-width: 576px) {
-					min-height: 164px;
-				}
-				@media (max-width: 496px) {
-					min-height: 140px;
-				}
-				@media (max-width: 335px) {
-					min-height: 162px;
-				}
-
-				p {
+	.fa {
+		padding-right: 0.25em;
+	}
+	#cp-main {
+		background-color: #fff;
+	}
+	.cp-container {
+		background: #fff;
+		text-align: center;
+		.cp-iconCont {
+			h4 {
+				margin-top: 1.5em;
+				margin-bottom: 1.5em;
+			}
+			div {
+				.card {
+					padding: 1em 1em 0.5em 1em;
+					box-shadow: 0 5px 15px rgba(69,145,196, 0.3);
+					border-color: #fff;
 					text-align: center;
-				}
+					margin-bottom: 1em;
+					min-width: 10em;
 
-				p.sign {
-					font-size: 	5em;
-					color: 		lightblue;
+					&:hover, &:focus {
+						text-decoration: none;
+						transform: scale(1.05);
+					}
+					@media (max-width: 1200px) and (min-width: 769px) {
+						min-height: 139px;
+					}
+					@media (max-width: 768px) and (min-width: 576px) {
+						min-height: 164px;
+					}
+					@media (max-width: 496px) {
+						min-height: 140px;
+					}
+					@media (max-width: 335px) {
+						min-height: 162px;
+					}
+
+					p {
+						text-align: center;
+					}
+
+					p.sign {
+						font-size: 	5em;
+						color: 		lightblue;
+					}
+
 				}
 
 			}
-
 		}
 	}
-}
-.cp-contdet {
-	padding-top: 1em;
-    padding-bottom: 1em;
-    background-image: url(/customize/images/how-to-help-mentor-3610255.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    h1 {
-        font-weight: 700;
-        color: #fff;
-    }
+	.cp-contdet {
+		padding-top: 1em;
+		padding-bottom: 1em;
+		background-image: url(/customize/images/how-to-help-mentor-3610255.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		h1 {
+			font-weight: 700;
+			color: #fff;
+		}
+	}
 }
