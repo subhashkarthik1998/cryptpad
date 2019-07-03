@@ -113,8 +113,12 @@
 @media screen and (max-width: @browser_media-medium-screen) {
     #cp-sidebarlayout-container {
         flex-flow: column;
+        overflow: auto;
         #cp-sidebarlayout-leftside {
             width: 100%;
+        }
+        #cp-sidebarlayout-rightside {
+            overflow: unset;
         }
     }
 
